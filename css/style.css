@@ -1,0 +1,266 @@
+* {
+	box-sizing: border-box;
+}
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* ПОДКЛЮЧЕНИЕ ШРИФТОВ */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url('fonts/roboto-v29-latin_cyrillic-regular.woff2') format('woff2'),
+        url('fonts/roboto-v29-latin_cyrillic-regular.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url('../fonts/roboto-v29-latin_cyrillic-500.woff2') format('woff2'),
+         url('../fonts/roboto-v29-latin_cyrillic-500.woff') format('woff');
+  }
+   @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url('../fonts/roboto-v29-latin_cyrillic-700.woff2') format('woff2'),
+         url('../fonts/roboto-v29-latin_cyrillic-700.woff') format('woff');
+  }
+/* ПЕРЕМЕННЫЕ И ОБЩИЕ НАСТРОЙКИ*/
+  :root {
+    /* Basic fonts */
+	--font-family: 'Roboto', sans-serif;
+    /* Basic colors */
+    --white:#ffffff;
+    --black:#000000;
+    /* Project colors */
+    --grey:#EFEFEF;
+    --accent:#F13C6E;
+    --dark:#333333;
+}
+body {
+	font-family: var(--font-family);
+	font-weight: 400;
+}
+/* АДАПТИВНОСТЬ ДЛЯ ИЗОБРАЖЕНИЙ */
+img {
+	max-width: 100%;
+}
+/* ОБНУЛЯТОРЫ ДЛЯ СПИСКОВ */
+.list-reset {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+/* ОБНУЛЯТОРЫ ДЛЯ КНОПОК */
+.btn-reset {
+	padding: 0;
+	border: none;
+	font-family: var(--font-family);
+	background-color: transparent;
+	cursor: pointer;
+}
+/* ОГРАНИЧИВАЕМ КОНТЕНТ */
+.container {
+	max-width: 1140px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+/* --------------- ШАПКА САЙТА --------------- */
+
+/* ---------ВЕРХНЯЯ ЧАСТЬ ШАПКИ----------*/
+.header-top {
+    background-color: var(--grey);
+}
+.header-top-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 0 16px 0;
+}
+.header-top-item:not(:first-child) {
+    padding-left: 30px;
+}
+.header-top-link {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+	font-size: 14px;
+	line-height: calc(16 / 14 * 100%);
+	text-align: center;
+	color: var(--dark);
+    text-decoration: none;
+}
+.header-top-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ---------СРЕДНЯЯ ЧАСТЬ ШАПКИ--------- */
+/* -------- 1 --------- */
+.header-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    /* background-color:coral; */
+}
+.header-middle-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36 * 100%);
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+}
+
+/* -------- 2 --------- */
+.search-form input[type=text] {
+    min-height: 40px;
+    max-width: 250px;
+
+    border: none;
+    border-radius: 40px;
+    outline: none;
+
+    padding: 0 0 0 40px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(19 / 16 * 100%);
+    color: var(--black);
+
+    background-color: var(--grey);
+    background-image: url('img/search.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    transition: all 0.3s ease 0s;
+}
+.search-form input[type=text]:focus {
+    background-color: #F13C6E;
+    color: #fff;
+}
+
+/* -------- 3 --------- */
+.header-middle-contact-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 93px;
+}
+.header-contact-phone {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(19 / 16 * 100%);
+    color: var(--black);
+    text-decoration: none;
+}
+.header-middle-search-form-button {
+    border: 2px solid #F13C6E;
+    border-radius: 40px;
+    min-height: 40px;
+    padding: 12px 26px 12px 27px;
+    margin: 0 0 0 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(16/14*100%);
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+
+    transition: all 0.3s ease 0s;
+}
+.header-middle-search-form-button:hover {
+    background-color: #F13C6E;
+    color: #fff;
+}
+
+.header-middle-border-bottom {
+width: 100%;
+height: 1px;
+background: var(--grey);
+}
+/* ---------НИЖНЯЯ ЧАСТЬ ШАПКИ--------- */
+.header-bottom-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 30px 0;
+}
+.header-bottom-item:not(:first-child) {
+    padding-left: 40px;
+}
+.header-bottom-link {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+	font-size: 14px;
+	line-height: calc(19 / 16 * 100%);
+	text-align: center;
+	color: var(--black);
+    text-decoration: none;
+}
+.header-bottom-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* -------------ОСНОВНОЕ СОДЕРЖИМОЕ------------- */
+/* --------БЛОК ОСНОВНОГО СОДЕРЖИМОГО-------- */
+.hero {
+	min-height: 604px;
+	background-image: url("../img/hero.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.hero-content {
+
+}
+.hero-title {
+    margin: 0;
+}
+.hero-button {
+    border: 2px solid #fff;
+    border-radius: 40px;
+    min-height: 40px;
+    padding: 12px 26px 12px 27px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(16/14*100%);
+    letter-spacing: 0.05em;
+    background-color: var(--accent);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+
+    transition: all 0.3s ease 0s;
+}    
+.hero-button:hover {
+    background-color: #F13C6E;
+    color: #000000;
+}
