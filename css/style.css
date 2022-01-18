@@ -314,19 +314,21 @@ background: var(--grey);
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 .discounts-item {
     display: flex;
     flex: 0 1 25%;
-    flex-wrap: wrap;
+    padding: 25px 0 25px 0;
+    /* flex-wrap: wrap; */
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-width: 255px;
+    max-width: 255px;
     background-color: #ffffff;
 }
 .discounts-img {
-    padding: 25px 65px 0 65px;
+    padding: 0 65px 0 65px;
 }
 .discounts-descr {
     font-style: normal;
@@ -347,11 +349,8 @@ background: var(--grey);
     color: #000000;
     padding: 20px 87px 20px 87px;
 }
-div.discount-button {
-    padding: 0 0 25px 0;
-}
 a.discount-button {
-    display: inline-block;
+    display: block;
     border: 2px solid #fff;
     border-radius: 40px;
     min-height: 35px;
@@ -385,14 +384,90 @@ a.discount-button {
 }
 .gifts-body {
     background-color: var(--accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex: 0 1 50%;
+    padding: 35px 45px 35px 40px;
 }
 .gifts-item {
-
+    max-width: 250px;
 }
 .gifts-title {
-
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(21/18*100%);
+    color: #FFFFFF;
+    margin: 0;
 }
 .gifts-descr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20/14*100%); 
+    color: #FFFFFF;
+    padding: 25px 0 0 0;
+}
+.gifts-subscribe-form {
+    flex: 0 1 50%;
+    display: flex;
+    align-items: center;
+    padding: 25px 0 0 0;
+}
+.gifts-subscribe-input {
+    min-height: 35px;
+    min-width: 225px;
+    outline:none;
+    border: none;
+    border-radius: 30px;
+    padding: 0 0 0 25px;
+}
+.gifts-subscribe-input input[type="text"] {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(16/14*100%);
+    text-align: center;
+    color: #C4C4C4;
+}
 
+/* --------БЛОК С БРЕНДАМИ-------- */
+.brands {
+    margin: 99px 0 0 0;
+}
+.brands-body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 130px;
+    grid-row-gap: 70px;
+    padding: 35px 60px 35px 60px;
+    background-color: #ffffff;
+}
+
+/* --------БЛОК С НЕДАВНО ПРОСМОТРЕННЫМ-------- */
+
+/* --------ПОДВАЛ САЙТА-------- */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 25px 0;
+}
+.footer-copyright {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12*100%);
+    color: #828282;
+}
+.footer-privacy {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12*100%);
+    color: #828282;
 }
