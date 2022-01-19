@@ -110,7 +110,6 @@ img {
     align-items: center;
     padding: 20px 0 20px 0;
     background-color: var(--white);
-    /* background-color:coral; */
 }
 .header-middle-logo {
     display: flex;
@@ -448,12 +447,70 @@ a.discount-button {
 
 /* --------БЛОК С НЕДАВНО ПРОСМОТРЕННЫМ-------- */
 
-/* --------ПОДВАЛ САЙТА-------- */
+/* --------ПОДВАЛ САЙТА (ВЕРХНЯЯ ЧАСТЬ)-------- */
+.footer {
+    background-color: var(--white);
+    margin: 80px 0 0 0;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    padding: 60px 0 112px 0;
+}
+.footer-top-column {
+    flex: 0 1 calc(25% - 30px);
+}
+.footer-top-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140.62%;
+    color: #000000;
+    margin: 0;
+}
+.footer-top-border-bottom {
+    width: 100%;
+    height: 1px;
+    background: var(--grey);
+    margin: 30px 0 0 0;
+}
+.footer-top-list {
+    margin: 25px 0 0 0;
+}
+.footer-top-item:not(:first-child) {
+    padding: 5px 0 0 0;
+}
+.footer-link {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+	font-size: 12px;
+	line-height: 233%;
+	text-align: center;
+	color: #828282;
+    text-decoration: none;
+}
+.footer-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* --------ПОДВАЛ САЙТА (СРЕДНЯЯ ЧАСТЬ)-------- */
+.footer-middle {
+    color: var(--white);
+}
+
+/* --------ПОДВАЛ САЙТА (НИЖНЯЯ ЧАСТЬ)-------- */
 .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 0 25px 0;
+    background-color: black;
 }
 .footer-copyright {
     font-family: Roboto;
@@ -470,4 +527,33 @@ a.discount-button {
     font-size: 12px;
     line-height: calc(14/12*100%);
     color: #828282;
+}
+
+.footer-middle {
+    padding: 37px 0 38px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.footer-middle-socials {
+}
+.social-icons {
+}
+.footer-middle-adress {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(16/14*100%);
+    color: #000000;
+}
+.header-middle-contact-phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-contact-phone {
+}
+.header-middle-search-form-button {
 }
